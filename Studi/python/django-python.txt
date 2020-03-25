@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-20T16:32:37+01:00
+
+====== django-python ======
+Created Freitag 20 März 2020
+
+python -m django --version
+
+==== craete projekt ====
+django-admin startproject mysite
+
+==== run Server ====
+cd mysite
+python manage.py runserver
+python manage.py runserver 8080
+
+==== admin ====
+admin, gabi2003
+
+
+1fc1debf3e9bdb352169ead4cf76644f20c11177
+
+pa_autoconfigure_django.py --python=3.6 https://github.com/sriedernew/bogen.git
+https://github.com/sriedernew/bogen.git
+
+https://www.pythonanywhere.com/user/srieder
+
+srieder.pythonanywhere.com
+
+django, hammer25
+
+(srieder.pythonanywhere.com) 17:38 ~/srieder.pythonanywhere.com (master)$ python manage.py createsuperuser
+Benutzername (leave blank to use 'srieder'): admiral
+E-Mail-Adresse: susann.rieder@gmx.de
+Password: 
+Password (again): 
+Superuser created successfully.
+(srieder.pythonanywhere.com) 20:30 ~/srieder.pythonanywhere.com (master)$
+
+git
+sriedernew
+Sia891963g
+
+nach git pull
+{{./pasted_image.png}}
+
+
+ python manage.py collectstatic

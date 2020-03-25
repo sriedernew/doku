@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T14:23:40+01:00
+
+====== errors ======
+Created Dienstag 20 Februar 2018
+
+==== bash: cannot create temp file for here-document: No space left on device" ====
+
+und excel speichert nicht
+
+df -h
+	/dev/sda2       9.1G  8.7G     0 100% / 
+du -h --max-depth=1 --exclude /home/  /
+	...
+	8,0K	/media
+	13M	/sbin
+	45G	/var
+	6,2G	/usr
+	...
+	
+du -h --max-depth=1 --exclude /home/  /var/lib/docker/
+	11M	/var/lib/docker/image
+	20K	/var/lib/docker/plugins
+	28K	/var/lib/docker/volumes
+	1,1M	/var/lib/docker/containers
+	4,0K	/var/lib/docker/swarm
+	31G	/var/lib/docker/aufs
+	...
+
+docker rm -f mad_keller loving_hodgkin pedantic_montalcini
+
+==== Boot ist voll ====
+0. df -h
+1. sudo dpkg -l | grep linux-image
+2. sudo apt-get remove --purge  linux-image-extra-4.4.0-10*
+3. sudo apt-get remove --purge  linux-image-4.4.0-10*
+4. sudo apt-get autoremove
+5. rm *datei*
+
+df - freien Platz anzeigen (disk free)
+du - belegten Platz anzeigen (disk usage)
+
+==== Unity zerschossen: ====
+mv .config .backup_config
+mv .gnome2 .backup_config
+mv .gconf .backup_config
+mv .cache .backup_config
+mv .local .backup_config

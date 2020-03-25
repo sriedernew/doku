@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-12-30T11:32:29+01:00
+
+====== Installation ======
+Created Mittwoch 30 Dezember 2015
+
+1. images runterladen
+2. Startmedienmanager benutzen
+3. sudo apt-get install synaptic gdebi joe-jupp ubuntu-restricted-extras gimp gimp-plugin-registry inkscape scribus nautilus-open-terminal seahorse-nautilus vlc
+
+
+SynapticHowto

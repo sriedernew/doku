@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-25T11:59:33+02:00
+
+====== aufräumen ======
+Created Dienstag 25 September 2018
+
+==== Anzeigen ====
+Verzeichnes nach größe sortiert im aktuellen Verzeichnis
+sudo du -shx ./* | sort -h 
+
+sudo du -h /var/log 
+
+Freier Speicherplatz für das Dateisystem
+sudo df -hl
+
+==== tar ====
+sudo tar cfvz inmarsat.tar.gz *.html
+sudo find . -name '*.html' -print >/tmp/inmarsat.manifest
+tar -cvzf inmarsat.tar.gz --files-from /tmp/inmarsat.manifest
+
+==== Löschen ====
+find [[/opt/crawler_data/uscg_vin/]]  -name "*.html" -delete -print
+sudo rm -r -f Ordnername/* 
+sudo rm -r -f inmarsat/* 
+
+==== überflüssige Abhängigkeiten entfernen ====
+sudo apt-get autoremove
+sudo apt-get clean
+sudo apt-get update
+
+==== Dockeraufräumen ====
+docker image list #listed die Images auf
+docker system df #listed den Speicherbedarf auf
+docker system prune #nicht Benutzte Images werden gelöscht
+docker rmi Image Image
+
+
+sudo tar cfvz shipdb_import_log_201810.tar.gz shipdb_import.log
+
+
+docker ps --filter status=dead --filter status=exited -aq | xargs docker rm -v
+docker images --no-trunc | grep '<none>' | awk '{ print $3 }' | xargs docker rmi
+docker volume ls -qf dangling=true | xargs docker volume rm

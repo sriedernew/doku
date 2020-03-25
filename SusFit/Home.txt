@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-06-26T16:08:23+02:00
+
+====== Home ======
+Created Mittwoch 26 Juni 2019
+SuFi - Susann Fitness
+
+[[KettSu]] - Kettlebell
+[[BoSu]] - eigener Körper
+[[StepSu]] - Treppe rauf und runter
+[[FreeSu]] - im Freien
+[[FoSu]] - Food, Essen
+[[FlexiSu]] - Training mit dem Gummiband
+[[BaSu]]  - Gleichgewichtstraining
+[[JogSu]] - Jogging

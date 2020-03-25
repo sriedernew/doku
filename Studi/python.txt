@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-22T16:23:38+01:00
+
+====== python ======
+Created Mittwoch 22 Januar 2020
+
+https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart
+
+conda info --envs
+conda activate my_env
+jupyter notebook
+
+root@susannrieder-ThinkCentre-M92p:/home/susannrieder/Downloads# conda activate my_env
+(my_env) root@susannrieder-ThinkCentre-M92p:/home/susannrieder/Downloads# 
+
+
+(my_env) root@susannrieder-ThinkCentre-M92p:/home/susannrieder/Downloads# python
+Python 3.8.1 (default, Jan  8 2020, 22:29:32) 
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+
+pip install seaborn
+pip install jupyter
+
+jupyter notebook
+
+>>> import numpy
+>>> import matplotlib
+>>> import pandas
+>>> import IPython
+>>> import seaborn
+
+conda deactivate
+deaktiviert base
+
+anaconda-navigator
+designer
+
+pyuic5 -x test.ui -o test.py
+

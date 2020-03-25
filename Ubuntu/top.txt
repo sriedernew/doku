@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-04-04T14:04:24+02:00
+
+====== top ======
+Created Dienstag 04 April 2017
+
+top fasst alle bisher genannten Kommandos zusammen und fügt noch einiges hinzu.
+
+Ganz oben stehen die von uptime bekannten Werte (Systemzeit, Uptime, angemeldete Benutzer und Auslastung).
+In der nächsten Zeile kommt die Anzahl der laufenden Prozesse und ihre Zustände. Die Zustände wurden bereits bei  ps erklärt.
+Die dritte Zeile zeigt den prozentualen Anteil an, womit sich der (oder die) Prozessor(en) in den letzten Sekunden beschäftigt hat (haben).
+**user:**
+Mit user sind Prozesse gemeint, die von den Benutzern des Systems gestartet worden sind.
+system:
+Hierbei sind sämtliche Prozesse gemeint, die vom System gestartet worden sind.
+**nice:**
+Damit sind all die Prozesse gemeint, die nicht mit einem   nice von 0 (null) laufen.
+**idle:**
+Mit idle wird die noch zur Verfügung stehende Prozessorlast bezeichnet.
+Nun kommen noch die von  free bekannten Speicherangaben.
+Als letztes folgt die Liste mit den ressourcenträchtigesten Prozessen. Im Gegensatz zu ps werden bei top weitere Informationen zu den einzelnen Prozessen ausgegeben:
+
+**User**
+gibt den Namen des Users an, unter welchem der Prozess läuft.
+**PR**
+gibt die Priorität des Prozesses an
+**NI**
+gibt den Nice-Wert an. Ein negativer Wert bedeutet eine höhere Priorität, ein positiver Wert eine geringere Priorität.
+**VIRT**
+gibt die gesamte Anzahl an Speicher an, den dieser Prozess benötigt, inklusive den Code, den Daten und den geteilten Bibliotheken.
+**RES**
+gibt die Belegung des physikalischen Arbeitsspeichers an. Auslagerungen im Swap-Speicher werden hier nicht berücksichtigt.
+**SHR**
+gibt die Anzahl des Speichers an Daten an, die auch von anderen Prozessen genutzt werden können.
+**S**
+gibt den Status des Prozesses an. Siehe dazu auch die Erklärung bei  ps.
+**%CPU**
+gibt an wieviel Prozent von der gesamten Prozessorleistung der Prozess benötigt.
+**%MEM**
+gibt dasselbe wie %CPU an, diesmal aber bezogen auf den physikalischen Arbeitsspeicher.

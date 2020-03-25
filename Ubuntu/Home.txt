@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-12-30T11:25:59+01:00
+
+====== Home ======
+Created Mittwoch 30 Dezember 2015
+
+1. [[Installation]]
+2. [[Konsole]]
+3. [[Shellscripte]]
+4. [[Screen]]
+5. [[vi]]
+6. [[top]]
+
+
+===== Aliases: =====
+
+alias **pgroot**='psql -U root -d vesseltracker'
+alias **pgais**='psql -U ais -d vesseltracker'
+alias **glasslog**='tail -f /home/susannrieder/glassfish3/glassfish/domains/vesseltracker/logs/server.log'
+alias **shipdocker**='cd /home/susannrieder/workspace/docker/shipdb/env_development'
+alias **shipdb**='cd /home/susannrieder/workspace/shipdb'
+alias **vtweb**='cd /home/susannrieder/eclipse-workspace/vt-next/vt-web'
+alias **nextrun**='mvn clean install -DskipTests -f ../pom.xml  && mvn spring-boot:run -Debug'

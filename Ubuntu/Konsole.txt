@@ -1,0 +1,442 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-12-30T11:31:43+01:00
+
+====== Konsole ======
+Created Mittwoch 30 Dezember 2015
+
+==== Konsole-Tab ====
+strg-shift t
+
+==== Tastenspeicher ====
+STR R, Suchen im Tastenspeicher
+
+==== Konsolen-Rechner ====
+bc
+4*5s
+20
+
+==== Kill ====
+pkill vedit //alle Prozesse die vedit enthalten
+
+==== split ====
+ split -l 5000 trafigura_fleet_imo.csv trafi_splitted_
+
+==== ps - processes ====
+ps parameter
+z.B. ps -faux
+ps -faux | grep gedit
+
+==== mkdir ====
+Verzeichnis erstellen
+
+==== sudo -s ====
+sudo for ever
+sudo su -
+
+==== Dateien kopieren ====
+cp [OPTIONEN] QUELLE ZIEL 
+
+==== Verzeichnis kopieren ====
+cp -a quelle ziel 
+
+==== Zwei Dateien zusammenkopieren ====
+cat -A parsing_data-2014082*.txt > test2.txt
+cat Seite_1.txt Seite_2.txt > text_komplett.txt 
+
+Zeilen löschen
+grep -v '|' zu2.csv > zu3.csv
+
+Zeilen zählen
+cat *.cpp | wc -l
+cat /opt/import_data/vesseltracker/import_vesseltracker_diff_w_position_and_area_and_dim_1479999606.csv | wc -l
+cat gibsons_output_201705*.csv | wc -l
+
+
+==== Dateien suchen: ====
+find -name "*.pdf"  
+oder
+wc -l *.txt
+1553 parsing_data-20140822.txt
+  739 parsing_data-20140826.txt
+2292 test2.txt
+
+wc -l  SpawnPreparer
+
+==== Dateien umbenenen ====
+mv datei_a.txt datei_b.txt
+for i in *.JPG
+do mv "$i" "${i/.JPG}".jpg
+done
+
+==== In Dateien suchen: ====
+
+ -r -i -n -l 'TTHVKGJmTVq5WgSXFfz87w' [[./]]
+
+-i	ignoriert Groß/Kleinschreibung
+-w	Das gesuchte Wort muss alleine stehen. z.B. Wir suchen "test", dann würde mit -w "tester" nicht gefunden werden.
+-n	Gibt die Zeilennummer aus, auf der der Ausdruck gefunden wurde.
+-l	Wenn du in mehreren Dateien suchst, dann gibt -l nur die Dateinamen an in denen der Ausdruck gefunden wurde.
+-x	Der Ausdruck muss der gesamten Zeile entsprechen, z.b. du suchst das Wort "test", wenn nun in einer Zeile "test 123 frau" steht, dann würde diese Zeile nicht ausgegeben werden, da test nicht alleine steht.
+-e	Erlaubt komplizierte RegEx's mit grep zu nutzen
+
+oder grep 9377913 *.*
+9377913
+
+grep -n production [[./]]
+
+find -type f -exec grep -l 'search_direct' {} \;
+
+
+==== DIR komplett ====
+ls -l
+
+==== Datei löschen ====
+rm datei 
+
+==== viele Dateien löschen ====
+find /var/log -name "mail.0.*" -exec rm '{}' \;
+				oder
+find /var/log -name "mail.0.*" -delete -print
+
+find  -name "*.*" -exec rm '{}'
+find -name *.*" -delete
+
+==== Dirs mit vielen Dateien löschen ====
+find /root/cpb/ -type d -name photo1 -okdir rm -rf {} \;
+sudo find  -name "*.html" -exec rm -rf '{}' \;
+
+==== Dirs löschen ====
+rm -r 1/*
+im  Verzeichnis ohne Nachfrage
+sudo rm -r -f *
+rm -r -f Ordnername/* 
+
+==== ssh key zum einlogen ohne passwort ====
+ssh-copy-id root@typo.ynnor.de
+
+==== mit ssh vom eigenenen Rechner ein Script auf Server ausführen ====
+ssh root@192.168.1.83 'cd /opt/www/master_data_crawler/scripts/uscg && php csv_data.php'
+
+==== logs angucken ====
+tail -f access.log
+tail -f -n30 /var/log/crawler.log /var/log/parser.log	
+tail -f [[/opt/appserver/glassfish/domains/vesseltracker/logs/server.log]]
+tail -f -n30 [[/var/log/syslog.log]]
+tail -f -n30 [[/home/susannrieder/glassfish3/glassfish/domains/vesseltracker/logs/server.log]]
+tail -f -n30 20180205_vessels_de_full.csv
+
+==== Datei 1. 30 Zeilen anschauen ====
+head -n30 gibson_company.csv > test_gibson_company.csv
+
+==== Spezielle Prozesse angucken| ====
+ps -faux |grep glas
+ss
+
+==== Boot ist voll ====
+0. df -h
+1. sudo dpkg -l | grep linux-image
+2. sudo apt-get remove --purge  linux-image-extra-4.4.0-12*
+3. sudo apt-get remove --purge  linux-image-4.4.0-12*
+4. sudo apt-get autoremove
+5. rm *datei*
+
+==== Cat und Grep ====
+cat /scripts/check_data/check_status_of_ship_standardized.csv | grep -i servi
+cat [[/201609*.csv|201609*.csv]]
+
+==== scp vom server ziehen ====
+scp root@maximus.ynnor.intern:/opt/median_backup/*.* .
+susann@susannneupc:~/Downloads$ scp root@maximus.ynnor.intern:/opt/median_backup/*.* .
+susann@susannneupc:~/Downloads$ scp root@maximus.ynnor.intern:/opt/cra[[wler_data/uscg/parsing*.*]]
+scp root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv .
+scp root@es.shipdb.com:/opt/import_data/tl/*.xlsx .
+scp ./*.csv root@es.shipdb.com:/opt/import_data/tl/
+scp quell ziel
+scp root@bla . (der Punkt ist das aktuelle Verzeichnis als Quelle)
+[[/opt/import_data/astra_paging]]
+
+scp root@es.shipdb.com:/opt/import_data/[[/opt/import_data/astra_paging|astra_paging]][[/201609*.csv]] .
+scp root@es.shipdb.com:/opt/import_data/q88/*201609*.*
+
+scp root@es.shipdb.com:/opt/import_data/skn/*.* .
+scp susann[[@es.shipdb.com]]:/opt/import_data/dnvg/*2016_08_31*.csv .
+scp [[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|root@es.shipdb.com:/root/t*.txt]] .
+scp ./ [[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|root@es.shipdb.com:/scripts/some_check_for_export_vessels.sh]] 
+
+scp [[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|root@es.shipdb.com:/scripts/]] .
+
+scp root@maximus.ynnor.intern:/root/*.sql .
+
+scp root@es.shipdb.com:/opt/import_data/tl/*.csv .
+
+scp root@es.shipdb.com:/opt/import_data/vessel/*.csv .
+
+scp [[root@es.shipdb.com:/opt/import_data/tl/*.csv|root@es.shipdb.com:]]/opt/export[[_data/problemships/]] .
+scp ./export_problem.sh root@es.shipdb.com:[[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|/scripts/]]
+
+scp  root@es.shipdb.com:[[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|/scripts/]]
+
+scp usa_vessels.sh/ susann[[root@es.shipdb.com:/opt/import_data/astra_paging/20150406_vessels_de_full.csv|@es.shipdb.com:/scripts/]]
+
+==== Speicherverbrauch pro Dir ====
+du -h | grep -E '[0-9]G'
+
+==== IP auslesen ====
+ifconfig
+
+==== Aptitude/Paket deinstallieren ====
+aptitude remove --purge <paketname>
+aptitude search apache
+
+sudo apt-get remove --auto-remove unoconv
+sudo apt-get autoclean
+
+==== CRONcp ====
+/etc/init.d/cron stop
+/etc/init.d/cron start
+/etc/init.d/cron reload
+/etc/init.d/cron restart
+
+59 23 23 12 * (echo "Lass uns das Logo aendern" | mail -s "Gleich knallt es" user@domain.xy)
+59 23 26 12 * (echo "Lass uns das Logo aendern" | mail -s "Gleich knallt es" user@domain.xy)
+
+alle 2 Stunden
+
+0 1,3,5,7,9,19,21,23 * * * root (. /root/.bashrc && rake data_maintenance:set_multi_level_status >> /var/log/maintenance.log 2>&1 )
+
+==== Verküpfung ====
+ln -s /glassfish3/glassfish appserver
+
+==== wget ====
+wget -c [[www.cruisejungle.de/liberty-of-the-seas.htm]]
+--user-agent
+
+==== Speicher ====
+free -m 
+16gb
+top
+
+==== Hardware ====
+sudo lshw -html > /var/www/System.html  
+sudo lshw -html > System.html  
+sudo lshw -businfo 
+
+==== watch ====
+watch 'scp /var/www/images/js/vtApi/vtMap_2_63.js root@app01.vesseltracker.com:/opt/ve[[sseltracker/images/js/vtApi']]
+
+==== awk ====
+cat check_value_type.csv | awk -F',' '{if ($17 > 3000 && ($5>100 && $5<300)) {print $1, $17;} }'
+
+cat multilevel_status.csv | awk -F'|' '{ {print $4;} }'
+
+==== Zeile zählen ====
+cat vesselproblem.csv | wc -l
+cat 20190603_astra_paging_for_import_9820207.csv | nl | grep 9820207
+
+
+cat RINA_Fleet_201912_ShipData.csv|nl| grep 13245328
+
+sed '4565,4565d' RINA_Fleet_201912_ShipData.csv >RINA_Fleet_201912_ShipData_clean.csv // löscht eine Zeile
+
+==== sed ====
+sed -n '800,1600 p' >> test_daten.csv
+sed '1,1d' VT-*.csv >files.2.csv // löscht eine Zeile
+sed '1,4d' VT-*.csv >tr-050315.csv // löscht vier Zeile
+
+
+==== Rechte ändern ====
+sudo chown  profan. . // elterverzeichnis
+sudo chown -R profan [[/opt/lampp/htdocs]]
+
+==== emails senden ====
+mail -s "please download new api" -c "paahsen@vesseltracker.com" -c "taylor@vesseltracker.com"  chen@vesseltracker.com ;
+echo "Monthly shipdb export for u-mas." | mail -s "[vesseltracker] - monthly export for u-mas" -r noreply@vesseltracker.com rieder@vesseltracker.com
+
+mail -v marco.ceppi.use@gmail.com
+Subject: Hello World!
+This is an email to myself.
+
+Hope all is well.
+.
+Cc: 
+
+mail -v rieder@ynnor.de
+Subject: Hello World!
+This is an email to myself.
+
+mail -s "subjet" -a "attchedfile_name" someone@dest_email.com
+
+mail -s "Quality Shipdb - check cbp" -a "check_data/cbp.csv" rieder@vesseltracker.com
+
+mail -s "Quality Shipdb - check cbp" -a "check_data/cbp.csv" rieder@vesseltracker.com
+hier erwartet er text und dann EOF machen ctrl d
+EOT
+
+ergo:
+echo "hier ist der cpb-anhang" | mail -s "Quality Shipdb - check cbp" -a "check_data/cbp.zip" rieder@vesseltracker.com
+
+==== Zippen ====
+zip ziel.zip quelle.csv
+zip -j /opt/export_data/weselmannvalue/vesselcharacterstics_$DATUM.zip [[/opt/export_data/weselmannvalue/vesselcharacterstics_$DATUM.csv]]
+-j ohne [[VerzeichnissStrucktur]]
+
+==== tar ====
+tar cfvz zimcity.tar.gz Notebooks
+
+zip check_data/cbp.zip check_data/cbp.csv
+echo "Hallo Martina,
+ 
+	Hier ist die cpb-Schiffsliste für die QS 
+	
+	----------------------------------
+	www.shipdb.com" | mail -s "Quality Shipdb - check cbp" -a "check_data/cbp.zip" -c "rieder@vesseltracker.com" milewski@vesseltracker.com
+	
+
+==== Dokumente Konvertieren per Komandozeile ====
+sudo apt-get install gnumeric gnumeric-plugins-extra gnumeric-doc 
+ssconvert --export-type=Gnumeric_stf:stf_csv *.xlsx *.csv
+
+libreoffice --headless --convert-to csv --outdir somedir *.xlsx
+soffice --headless --convert-to csv %Input%
+
+es muß ein Office installiert sein
+http://wiki.ubuntuusers.de/unoconv
+sudo apt-get install unoconv 
+
+unoconv OPTIONEN DATEI1 DATEI2 
+
+-d oder --doctype	Festlegung des Dokumententyps. (Mögliche Optionen: document, graphics, presentation, spreadsheet; Standard: document.)
+-e oder --export	Einstellung von Export-Filteroptionen (Bsp. für Exporte ins PDF-Format: -e PageRange=1-2)
+-f oder --format	Festlegung des Ausgabeformats (Liste möglicher Ausgabeformate: mit der Option --show option; Standardausgabeformat: PDF)
+-i oder --import	Einstellung von Import-Filteroptionen (Bsp.: -i utf8)
+-l oder --listener	unoconv als „Listener“-Instanz starten, mit der sich unoconv-Clients verbinden können
+-o oder --outputpath	Ausgabepfad (erst in aktuelleren Versionen von unoconv enthalten)
+--show	Auflistung möglicher Ausgabeformate (bei Verwendung von -f)
+--stdout	Ausgabe nach stdout
+-t oder --template	Verwendung von speziellen Vorlagen (Anwendungsfall: Nutzen eines Firmenbriefbogens)
+
+unoconv --listener & 
+
+**Beispiele:**
+unoconv -f xls tabellenkalkulation.csv 
+unoconv -f csv *.xlsx
+
+unoconv --listener &
+sleep 20
+unoconv -f pdf *.odt
+unoconv -f doc *.odt
+unoconv -f html *.odt
+kill -15 %-
+
+unoconv --show
+
+http://tech.rgou.net/en/php/converting-documents-odt-doc-to-pdf-on-php-with-unoconv-libreoffice/mk
+
+==== port anzeigen ====
+sudo netstat -tulpen | grep -v 127.0.0.1 |
+
+==== Datei Rechte ====
+chmod 0755 (ausführen) 
+chmod 0755 *martina*.sh
+
+==== Dateien vergleichen ====
+diff -y turk_local_imos_sort.csv turk_server_imos_sort.csv
+diff -y cbp_martina_8.csv cbp_martina_9.csv
+diff -y callsignimport_uniq.csv callsigndouble_uniq.csv
+diff -y challinor.txt stage3.txt
+
+==== Netzwerk: ====
+route
+traceroute
+
+==== router ändern: ====
+sudo vi [[/etc/network/interfaces]]
+gateway 192.168.1.254
+
+sudo /etc/init.d/networking restart
+
+sudo route add default gw 215.168.1.11
+
+==== uhr ist weg ====
+killall unity-panel-service
+
+
+==== figlet-ASCII-Grafik ====
+showfigfonts test
+
+**mit Farbe**
+echo -en "\033[1;32m"
+figlet -tcf standard Hallo Susann
+echo -e "\033[1;34m"
+
+**Konsolenuhr**
+watch -n1 "date '+%D%n%T'|figlet -k"
+
+**Konsolenuhr**
+while true; do echo "$(date '+%D %T' |figlet -k)"; sleep 1; done
+
+**Git-Status**
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1)\$ '
+
+**cvs sortieren**
+cat RINA_Fleet_201605_Ship_Index.csv | cut -d'|' -f2,3|sort -t'|' -k 2 >> RINA_Fleet_201605_RI_IMO.csv
+die Idioten haben das neue Shipdb gestoppt, keine Ahnung von Projektmanagment, kleine Schritte nahe Ziele, so geht das
+
+==== Datei erstellen ====
+touch maintenance.log
+nano Dateiname
+
+==== Nice - Priorität eines Prozesses ====
+Nice führt eine Befehednvgl_	l mit einer veränderten Priorität aus.
+Ein negativer Wert erhöht die Priorität und ein positiver erniedrigt ihn.
+Beispiel:
+nice -20 Befehl # Hier wird der Prozess mit der höchsten Priorität ausgeführt
+nice +20 Befehl # Hier wird der Prozess mit der niedrigsten Priorität ausgeführt
+Der Standartwert eines Prozesses beträgt +10
+Nur root darf negative Prozesswerte nutzen. 
+Um einen Laufenden Prozess zu verändern wird renice genutzt.
+Beispiel:Die Prozessnr. lautet 1234
+also
+renice -20 1234
+dies darf aber nur root
+
+==== cut ====
+cut -d\; -f1-10,13-21 import_vesseltracker_diff_w_position_and_area_and_dim_1483455606.csv > test2.csv
+
+==== sort ====
+sort q88_imo.csv | uniq -c  > q88_imo_uniq.csv
+sort [[callsigndouble.csv]] | uniq -c  > [[callsigndouble]]_uniq.csv
+sort rina_type.txt | uniq -c > rina_type_uniq.txt
+
+sort shiptype.csv | uniq -c  > shiptype_uniq.csv
+
+==== alias - Kurznamen für Befehle ====
+alias definiert Kurznamen (Aliase) für Befehlsaufrufe
+
+alias Kurzname='Befehl' 
+
+=== Dauerhafte Verwendung ===
+Einmal durch Bearbeiten der Datei [[~/.bashrc]]
+der durch Anlegen der Datei [[~/.bash_aliases]]
+
+=== Aktualisieren .bashrc/.bash_aliases ===
+source ~/.bashrc 
+source ~/.bash_aliases 
+
+=== zeigt Netzwerkaktivitäten ===
+sudo iftop
+route -n
+
+sudo iftop -PBi eno1
+
+netstat -i
+netstat -tp
+
+==== zuletzt eingelogt ====
+vi [[/var/log/auth.log]]
+cat [[/var/log/auth.log]]
+
+==== Zeichen löschen ====
+tr -d '{"' < changed_imo.csv > c_imo.csv
+

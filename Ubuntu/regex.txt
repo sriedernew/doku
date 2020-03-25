@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-14T11:05:03+01:00
+
+====== regex ======
+Created Mittwoch 14 Februar 2018
+mit leerzeichen
+/^[a-zA-Z0-9 -()_]$/
+
+\w\s\d
+
+^[A-Za-z0-9 ()-_]*$
+
+^[\s\w ()-_][^<>]*$
+
+^[\s\w ()-_][^<>@+\\]*$
+
+grep -v  '>'zusammen2.csv > zu1.csv

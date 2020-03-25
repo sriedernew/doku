@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T09:53:23+01:00
+
+====== files ======
+Created Donnerstag 30 Januar 2020
+
+def main(): 
+
+	f = open("kleine_paddelei.txt","a+")
+
+	# in einer Dauerschleife. Ein do ... wihle habe ich nicht gefunden
+	while True:
+		x = input("Enter boot:")
+		if x == "ende":
+			break
+		y = input("Enter km:")
+		z = input("Enter Min:")
+		text = "{},{},{}\n"
+		print(text.format(x, y, z))
+		f.write(text.format(x, y, z))
+	f.close()
+
+	# nach dem beenden des Schreibvorgang zu machen, ist sauberer
+	f = open("kleine_paddelei.txt","r")
+	if f.mode == 'r':
+		fl = f.readlines()
+		for x in fl:
+		  print(x)
+          
+# damit ich main nicht extra aufrufen muß
+if __name__ == "__main__":
+  main()

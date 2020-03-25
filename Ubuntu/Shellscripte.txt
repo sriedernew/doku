@@ -1,0 +1,95 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-12-30T11:30:09+01:00
+
+====== Shellscripte ======
+Created Mittwoch 30 Dezember 2015
+
+Shell Scripts sh (Bourne Shell)
+
+Vorbemerkung
+Allgemeines zu Shell Scripts
+Aufruf
+Einfaches Beispiel
+Testen eines Shell-Scripts
+Kommandozeilen-Parameter
+Prozeßsteuerung
+Bedingte Ausführung: if
+Mehrfachentscheidung: case
+Schleife: for
+Schleife: while und until
+Literatur
+Vorbemerkung
+
+Shell-Scripts (Kommandoprozeduren) sind unter Unix das Analogon zu Batch-Dateien (Stapeldateien) von MS-DOS, sie sind jedoch wesentlich leistungsfähiger. Ihre Syntax hängt allerdings von der verwendeten "Shell" ab. In diesem Artikel werden Bourne Shell (sh) Scripts betrachtet. Sie gelten im allgemeinen als zuverlässiger als csh-Scripts.
+Allgemeines zu Shell Scripts
+
+Ein Shell-Script ist eine Textdatei, in der Kommandos gespeichert sind. Es stellt selbst ein Kommando dar und kann wie ein Systemkommando auch mit Parametern aufgerufen werden. Shell-Scripts dienen der Arbeitserleichterung und (nach ausreichenden Tests) der Erhöhung der Zuverlässigkeit, da sie gestatten, häufig gebrauchte Sequenzen von Kommandos zusammenzufassen.
+Aufruf
+
+Bourne Shell Scripts lassen sich generell wie folgt aufrufen:
+sh myscript
+
+Im allgemeinen ist es aber praktischer, die Datei als ausführbar anzumelden (execute permission), mittels
+
+chmod +x myscript
+
+Das Shell-Script läßt sich dann wie ein "normales" (binäres) Kommando aufrufen:
+
+myscript
+
+Vorausgesetzt ist hierbei allerdings, daß das Betriebssystem das Script mit der richtigen Shell abarbeitet. Moderne Unix-Systeme prüfen zu diesem Zweck die erste Zeile. Für die sh sollte sie folgenden Inhalt haben:
+
+#!/bin/sh
+
+Obwohl das Doppelkreuz normalerweise einen Kommentar einleitet, der vom System nicht weiter beachtet wird, erkennt es hier, daß die "sh" (mit absoluter Pfadangabe: /bin/sh) eingesetzt werden soll.
+
+==== Einfaches Beispiel ====
+
+#!/bin/sh
+# Einfaches Beispiel
+echo Hallo, Welt!
+echo Datum, Uhrzeit und Arbeitsverzeichnis:
+date
+pwd
+echo Uebergabe-Parameter: $*
+Das vorstehende einfache Script enthält im wesentlichen normale Unix-Kommandos. Abgesehen von der ersten Zeile liegt die einzige Besonderheit im Platzhalter "$*", der für alle Kommandozeilen-Parameter steht.
+
+==== Testen eines Shell-Scripts ====
+
+sh -n myscript
+Syntax-Test (die Kommandos werden gelesen und geprüft, aber nicht ausgeführt)
+sh -v myscript
+Ausgabe der Shell-Kommandos in der gelesenen Form
+sh -x myscript
+Ausgabe der Shell-Kommandos nach Durchführung aller Ersetzungen, also in der Form, wie sie ausgeführt werden
+
+==== Kommandozeilen-Parameter ====
+
+$0
+Name der Kommandoprozedur, die gerade ausgeführt wird
+$#
+Anzahl der Parameter
+$1 $2 $3 ...
+erster, zweiter, dritter ... Parameter
+$*
+steht für alle Kommandozeilen-Parameter ($1 $2 $3 ...)
+$@
+wie $* ($1 $2 $3 ...)
+"$@"
+expandiert (im Unterschied zu "$*") zu:
+"$1" "$2" "$3" ...
+$$
+Prozeßnummer der Shell (nützlich, um eindeutige Namen für temporäre Dateien zu vergeben)
+$-
+steht für die aktuellen Shell-Optionen
+$?
+gibt den Return-Code des zuletzt ausgeführten Kommandos an (0 bei erfolgreicher Ausführung)
+$!
+Prozeßnummer des zuletzt ausgeführten Hintergrund-Prozesses
+Beispiel:
+
+#!/bin/sh
+# Variablen
+echo Uebergabeparameter: $*
+echo user ist: $USER

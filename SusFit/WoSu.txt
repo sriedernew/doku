@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-10T11:30:04+01:00
+
+====== WoSu ======
+Created Dienstag 10 März 2020
+
+Workout pro Woche vom 9.3. - 5.4.
+
+Mo: [[BoSu]] 5 Klasiker x
+Die: [[FreeSu]] Bootcamp x
+Mi: [[KettSu]]  Modilität
+Do: [[StepSu]] Skirennen
+Fr: [[FlexiSu]] Schulter
+Sa: [[JogSu]] Aufbau
+So: [[BaSu]] Kraft 

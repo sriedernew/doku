@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-22T20:38:16+01:00
+
+====== links ======
+Created Sonntag 22 März 2020
+
+https://www.python-kurs.eu/matplotlib.php
+https://www.python-course.eu/python3_packages.php
+https://towardsdatascience.com/build-a-web-data-dashboard-in-just-minutes-with-python-d722076aee2b
+https://docs.djangoproject.com/en/3.0/intro/tutorial02/
+https://github.com/cdubz/first-django-app
+https://tutorial.djangogirls.org/de/django_models/

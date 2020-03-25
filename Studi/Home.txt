@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-27T10:46:31+02:00
+
+====== Home ======
+Created Freitag 27 September 2019
+
+HPI: https://open.hpi.de/courses/ruby2018
+SfeRS&di5M30l
+
+
+https://experience.arcgis.com/

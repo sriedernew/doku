@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T17:58:52+01:00
+
+====== userInput ======
+Created Donnerstag 30 Januar 2020
+

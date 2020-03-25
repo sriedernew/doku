@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-07-25T09:54:20+02:00
+
+====== KnowHow ======
+Created Donnerstag 25 Juli 2019
+
+DevOps-Kram
+Load Ballance visa Ring
+https://www.youtube.com/watch?v=zaRkONvyGr8
+https://blog.mayflower.de/3712-Consistent-Hashing-e28093-intelligentes-Sharding.html
+https://www.toptal.com/big-data/consistent-hashing
+
+https://www.marionzualo.com/2019/06/06/an-overview-redisdistributed-redis-client-side-partitioning-in-ruby/
+http://cassandra.apache.org/
+https://www.bigdata-insider.de/grundlagen-der-nosql-datenbank-apache-cassandra-a-512231/

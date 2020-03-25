@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-27T10:57:16+02:00
+
+====== HPI-DatensicherheitImNetz ======
+Created Freitag 27 September 2019
+
+[[./W1-9_Sicherheitsziele.pdf]] 
+[[./W1-8_Kurze_Geschichte_der_Computerkriminalita_t.pdf]] 
+[[./W1-7_Verbreitete_Angriffe.pdf]] 
+[[./tools.txt]] 
+[[./W1-6_Angreifer_und_ihre_Motive.pdf]] 
+[[./W1-5_Cybercrime.pdf]] 
+[[./W1-4_Risiken_im_Internet.pdf]] 
+[[./W1-3_Das_Internet_-_Beliebtes_Angriffsziel.pdf]] 
+[[./W1-2_Einfuehrung_WWW.pdf]] 
+[[./W1-1_Einfuehrung_Internet.pdf]] 
+[[./W1-0_Einfuehrung_Woche_1.pdf]] 

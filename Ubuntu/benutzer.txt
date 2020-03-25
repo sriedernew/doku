@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-19T11:52:59+02:00
+
+====== benutzer ======
+Created Dienstag 19 September 2017
+
+==== Benutzer in eine Gruppe aufnehmen ====
+sudo usermod -aG GRUPPENNAME BENUTZERNAME
+
+sudo usermod -aG sudo profan
+
+newgrp -sudo

@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T17:34:01+01:00
+
+====== docker ======
+Created Dienstag 20 Februar 2018
+
+==== docker images anzeigen ====
+
+sudo docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<none>              <none>              c4d0bed71744        6 hours ago         1.13 GB
+hello-world         latest              1815c82652c0        8 months ago        1.84 kB
+<none>              <none>              b013b9200338        19 months ago       1.3 GB
+<none>              <none>              4661c67bca69        20 months ago       1.3 GB
+ubuntu              14.04               8f1bd21bd25c        21 months ago       188 MB
+
+==== List container ====
+
+sudo docker ps
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+0630c8e970c5        4661c67bca69        "/usr/bin/supervisord"   6 months ago        Up 7 hours          0.0.0.0:3000->3000/tcp, 0.0.0.0:9200->9200/tcp   suspicious_keller
+
+sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                   PORTS                                            NAMES
+28c4fe42186c        c4d0bed71744        "/bin/sh -c 'gem i..."   6 hours ago         Exited (1) 6 hours ago                                                    eager_darwin
+0630c8e970c5        4661c67bca69        "/usr/bin/supervisord"   6 months ago        Up 7 hours               0.0.0.0:3000->3000/tcp, 0.0.0.0:9200->9200/tcp   suspicious_keller
+
+
+==== Dockercontainer löschen ====
+
+sudo docker rm eager_darwin
+
+sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+0630c8e970c5        4661c67bca69        "/usr/bin/supervisord"   6 months ago        Up 7 hours          0.0.0.0:3000->3000/tcp, 0.0.0.0:9200->9200/tcp   suspicious_keller
+
+==== Images löschen ====
+docker stop hello-world
+sudo docker image rmi hello-world
+
+sudo docker image rmi c4d0bed71744 1815c82652c0 b013b9200338 8f1bd21bd25c
+
+Deleted: sha256:c4d0bed71744217e0d0189c901d89c3a18990a74d547c327a0e631ad49b5586c
+Deleted: sha256:15d5c1277cef7dafe85352ec8f2324f479a992a6cc146b65568fcd6bf8a6006a
+Deleted: sha256:119f510926ac8faeebcbef7a80291e28c80120bba3cb83fa69746202f57fea87
+Deleted: sha256:8cb7625372ababb0ae05110ab530612600b6c37d5d9e1fddbf5709834bb432dd
+Deleted: sha256:dad4ad16f31f4e6d0c8fd547d14d6794b50a3c9ecfc0c655884ff5505e6ea66e
+Deleted: sha256:e1fd365df45a99b3d6e2407cb8c744bc31cb924c9e4c4626138a7c6f6e12b2b0
+Deleted: sha256:0eb3868a02f8cebdce8ae3f62f2728d6e1ad22f09207fac0f88a2d67d3041521
+Deleted: sha256:3431d7e6072e0ed6bf402c7e6a9fae714435001cf7880045006fef9497205294
+Deleted: sha256:3deb5b76533399b97a8843620d56054ae6234e673556efc11ef669915cab8355
+Deleted: sha256:5e8281f4613893eb248fb5d26fc4e4d14b55a3a2afb3589f81909727bebbcb53
+Deleted: sha256:8b494308f12210db8f9ed7f93a4c27a3ca236b21ceb18d415386a49be769a897
+Deleted: sha256:17cee2ed15dd1213bc769f35f39703dc5783fba21a553f1b97a5ee361ba5ff4b
+Deleted: sha256:d5a53eb13c4a462f60fc66bfe85008a18f4d4b6244180bc9e83aa4e4f89c61e0
+Deleted: sha256:88cd42339c85cc732f8f5b186aaafcbc17d0888e47fb12f0f3233f645454f48b
+Deleted: [[sha256:7c99b35356786e4a2f12bf57d28c3654040fbe30067e9eda8087ec11890e06a0]]
+.....
+
+Error response from daemon: conflict: unable to delete 8f1bd21bd25c (cannot be forced) - image has dependent child images
+susannrieder:~/workspace/shipdb (better_than_best)$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<none>              <none>              4661c67bca69        20 months ago       1.3 GB
+ubuntu              14.04               8f1bd21bd25c        21 months ago       188 MB

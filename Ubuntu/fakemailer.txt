@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-06T13:30:01+02:00
+
+====== fakemailer ======
+Created Dienstag 06 August 2019
+
+sudo java -jar /home/susannrieder/fakemail/DevNullSmtp.jar -console -s  /home/susannrieder/fakemail/mails -p 25

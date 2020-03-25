@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-10T11:53:20+01:00
+
+====== JogSu ======
+Created Dienstag 10 März 2020
+
+Jogging
+
+Dauer: 25 Min
+Vorbereitung: 5 Min
+Runterfahren: 5 Min
+Training: 15 Min
+
+Vorbereitung: 5Kreise (Daumen, Hand, Eleenbogen,Schulter,Kopf,Schulter,Hüfte,Beine,Knie,Fußgelenke)
+Runterfahren: Wanderung(Sonnengruß, auf der Stelle gehen wie Wasser treten, Wasser schöpfen)
+
+Training:
+
+Aufbau:
+	* 10 x 100 Meter Joggen 100 Meter Gehen
+	* 5 x 30 Meter Riesen Schitte
+
+Ausdauer:
+	* 2 x 10 Minuten Joggen
+	* 2 x 5 Minuten gehen
+	* 5 x 30 Meter Riesen Schritte
+
+Sprint:
+	* 5 x 50 Meter Sprints
+	* 5 x 10 Meter Riesen Schritte
+	* 5 x 50 Meter Sprints
+	* 5 x HockStreck Sprünge
+	* 5 x 50 Meter Sprints
+

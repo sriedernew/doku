@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-12-30T11:29:32+01:00
+
+====== Screen ======
+Created Mittwoch 30 Dezember 2015
+
+==== Screen ====
+Eine Sitzung beendet man, indem man die dort laufende Shell beendet, also entweder mit dem Befehl exit oder durch Drücken von  Strg +  D .
+Starten einer neuen Sitzung mit dem Namen "sitzung1" (siehe auch Unterschied zwischen Sitzung und Fenster):
+**screen -S susann** 
+Trennt (engl.: "detach") die Verbindung zur aktuellen Sitzung:  **Strg +  A +  D**
+Nimmt die Sitzung wieder auf, falls nur eine einzige Sitzung im Hintergrund läuft:
+**screen -r** 
+Nimmt die Sitzung mit dem Namen "sitzung1" wieder auf:
+**screen -r susann** 
+Trennt die Verbindung zu einer laufenden Sitzung mit dem Namen "susann" (sehr hilfreich, wenn man z.B. die Verbindung per ssh verloren hat und deswegen die Sitzung nicht trennen konnte):
+**screen -d susann**
+liste der Screens
+**screen -ls**
+
+
+Strg+a 1 2 3 4 Seitennavigation
+
+==== screen hat eine confing: ====
+scp root@es.shipdb.com:/root/.screenrc .
+
+==== screennavi ====
+
+**ctrl a c**
+new Terminal
+**ctrl a p**
+letzter Terminal
+**ctrl a n**
+next Terminal
+**ctrl a shift2** 
+Terminalliste
+**ctrl a shift a**
+Terminalname ändescreen
+**ctrl a esc** 
+scrollen
+**ctrl a 1 ...**
+screen 1

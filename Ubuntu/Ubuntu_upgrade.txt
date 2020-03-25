@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-26T14:58:00+02:00
+
+====== Ubuntu upgrade ======
+Created Freitag 26 Oktober 2018
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo update-manager -d

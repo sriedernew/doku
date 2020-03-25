@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-26T12:45:10+01:00
+
+====== datenkommunikation ======
+Created Mittwoch 26 Februar 2020
+
+[[LibreOfficeCalc]] = Conditonal Formattierung {{../pasted_image001.png}} die Bunten Streifen sind es
+
+{{../pasted_image.png}}
